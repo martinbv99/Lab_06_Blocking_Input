@@ -16,11 +16,13 @@ public class HighorLow
         do
         {
             System.out.print("Guess a number [1-10]: ");
-            if (in.hasNextInt()) {
+            if (in.hasNextInt())
+            {
                 numGuess = in.nextInt();
-                in.nextLine();//clear buffer
+                in.nextLine();
 
-                if (numGuess >= 1 && numGuess <= 10) {
+                if (numGuess >= 1 && numGuess <= 10)
+                {
                     System.out.println("You guessed " + numGuess);
                     System.out.println("The number is " + val);
 
@@ -30,18 +32,20 @@ public class HighorLow
                         System.out.println("You were too high :O");
                     } else {
                         System.out.println("You were right on the money B)");
-                        numInput = true;
+
                     }
-                }else
+                    numInput = true;
+                }
+                else
                 {
                     System.out.println("Your guess is out of range ");
                 }
             }
-                else
-                {
-                   trash = in.nextLine();
-                   System.out.println("Your guess was " + trash + " which is not a valid input >:(");
-                }
+            else
+            {
+                trash = in.nextLine();
+                System.out.println("Your guess was " + trash + " which is not a valid input >:(");
+            }
         }while (!numInput);
     }
 }
